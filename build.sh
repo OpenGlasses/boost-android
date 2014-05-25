@@ -21,14 +21,14 @@
 
 # Download and unpack
 echo "Downloading boost"
-#wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.bz2/download -O boost_1_55_0.bz2
+wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.bz2/download -O boost_1_55_0.bz2
 echo "Unpacking archive"
-#tar xjf boost_1_55_0.bz2
+tar xjf boost_1_55_0.bz2
 
 # Patch
 cd boost_1_55_0
 echo "Applying patch for android"
-#patch -p1 < ../android.patch
+patch -p1 < ../android.patch
 
 # Bootstrap
 ./bootstrap.sh --without-libraries=python,mpi --prefix=../build
